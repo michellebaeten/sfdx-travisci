@@ -1,0 +1,112 @@
+<apex:page showHeader="false" sidebar="false" lightningStylesheets="true" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0" standardStylesheets="false" controller="directorySearchController" cache="false" expires="0">
+
+    <head>
+        <apex:slds />
+        <c:HeaderComponent ></c:HeaderComponent>
+        <apex:includeScript value="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" />
+        
+    </head>
+
+    <body>
+        <c:TopHeader noShare="true"></c:TopHeader>
+        <main>
+            <section>
+                <div class="container">
+
+                    <apex:outputPanel rendered="{!action == 'home'}" layout="none">
+
+                        <div style="align:center" class="betaHomeText">While using this site if you spot any inaccuracies in the data please contact us at <a href="mailto:team@economicchange.co.uk">team@economicchange.co.uk</a> </div>
+                        <div class="slds-grid slds-wrap">
+                            <h4>Better Tomorrow Trust</h4>
+                        </div>
+
+                        <apex:form >
+
+                            <div class="row">
+                                <div class="input-field col s12 m12">
+                                    <label for="">Enter organisation name or keyword</label>
+                                    <apex:inputText value="{!searchString}" style="float: left" />
+
+                                    <br clear="left" />
+                                    <apex:commandButton value="Search" action="{!search}" style="color:white;float:left;width:250px;height:50px;font-size:20px; background-color:#139DD8;" />
+                                </div>
+                            </div>
+
+                            <div id="serviceOptions">
+
+                                <h5>Services</h5>
+                                <apex:repeat value="{!selectedServices}" var="serv">
+                                    <div style="padding-left:30px;">
+                                        <p style="font-weight:bold;">
+                                            <label>
+                                                <apex:inputCheckbox value="{!selectedServices[serv]}" /> {!serv}
+                                            </label>
+                                        </p>
+                                    </div>
+                                </apex:repeat>
+                            </div>
+
+                            <div id="locationOptions">
+                                <h5>Locations</h5>
+                                <apex:repeat value="{!selectedLocations}" var="location">
+                                    <div style="padding-left:30px;">
+                                        <p style="font-weight:bold;">
+                                            <label>
+                                                <apex:inputCheckbox value="{!selectedLocations[location]}" /> {!location}
+                                            </label>
+                                        </p>
+                                    </div>
+                                </apex:repeat>
+                            </div>
+                        </apex:form>
+
+                    </apex:outputPanel>
+
+                    <apex:outputPanel rendered="{!action == 'search'}" layout="none">
+                        <div>
+                            <apex:form >
+                                <apex:commandLink action="/" value="new organisation search" styleClass="rightButton" />
+                                <h4>Search Results</h4>
+                            </apex:form>
+                        </div>
+
+                        <div>
+                            <apex:outputPanel rendered="{!ResultSize == 0}">
+                                <h4>Your search returned no results</h4>
+                            </apex:outputPanel>
+
+                            <apex:repeat value="{!results}" var="result">
+                                <div>
+                                    <a href="{!$Site.BaseUrl}/apex/directoryResults?id={!result.id}" target="_blank">{!result.name}</a>
+                                    <br /> {!IF(LEN(result.Description) > 250, LEFT(result.Description, 250)&'...', result.Description)}
+                                    <br />
+                                    <a href="{!$Site.BaseUrl}/apex/directoryResults?id={!result.id}" target="_blank">Read More</a>
+                                    <br/>
+                                    <br/>
+                                </div>
+                            </apex:repeat>
+
+                            <br/>
+
+                            <div style="text-align:center;">
+                                <apex:form >
+                                    <apex:commandLink action="{!previous}" rendered="{!hasPrevious}" value="< Previous Page" />
+                                    <apex:outputPanel rendered="{!hasPrevious && hasNext}">&nbsp;&nbsp;|&nbsp;&nbsp;</apex:outputPanel>
+                                    <apex:commandLink action="{!next}" rendered="{!hasNext}" value="Next Page >" />
+                                </apex:form>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+                </div>
+            </section>
+            <div>
+                &nbsp;
+            </div>
+            <div>
+                &nbsp;
+            </div>
+            <c:FooterComponent ></c:FooterComponent>
+        </main>
+
+    </body>
+</apex:page>

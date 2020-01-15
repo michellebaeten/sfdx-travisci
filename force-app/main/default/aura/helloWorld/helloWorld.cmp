@@ -1,0 +1,7 @@
+<aura:component access="global" implements="forceCommunity:availableForAllPageTypes">
+
+    <c:helloHeading />
+	    
+    <p>Hello Lightning!</p>
+ 
+</aura:component>

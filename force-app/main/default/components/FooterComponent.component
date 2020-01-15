@@ -1,0 +1,47 @@
+<apex:component >
+ 
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m10 margin-remove-bottom">
+                    <p class="grey-text text-lighten-1">
+                        {!$Label.FCC1} 
+                       
+                      
+                        
+                      </p>
+                     <p class="grey-text text-lighten-1">
+                      {!$Label.FCC2}
+                    </p>
+                    <p class="grey-text text-lighten-1">
+                      {!$Label.FCC3}
+                      
+                    </p>
+                    <p class="grey-text text-lighten-1">
+                      <strong>T:</strong>
+                      <span>{!$Label.FCC4} </span>
+                    
+                    <br/>
+                      <strong>E:</strong>
+                      <span>{!$Label.FCC5} </span>
+                      
+                    </p>
+                    
+                </div>
+                <div class="col s12 m2 margin-remove-bottom">
+                     <!--<ul class="right">
+                        <li class="grey-text text-lighten-1">{!$Label.FCC13}</li>
+                        <br/>
+                        <li class="grey-text text-lighten-1">{!$Label.FCC14}</li>
+                        <li class="grey-text text-lighten-1">{!$Label.FCC15}</li>
+                    </ul> -->
+                </div>
+            </div>
+            <div class="divider grey-text"></div>
+            <div class="col s12 padding-add-top padding-add-bottom-double valign-wrapper">
+                <span class="grey-text text-lighten-1"> &nbsp; Powered by <a href="https://supermums.org/" class="color:#18ADD0">Supermums</a></span>
+            </div>
+        </div>
+    </footer>
+
+</apex:component>

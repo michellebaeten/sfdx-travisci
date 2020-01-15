@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- To avoid consuming daily org-wide email limits, create a Chatter Free user whose email is the Email Service Address of the Apex Email Service that uses ChatterBotPostMessageEmailHandler. --></help>
+    <label><!-- Email Service Address User ID --></label>
+    <name>Email_Service_Address_User_ID__c</name>
+</CustomFieldTranslation>

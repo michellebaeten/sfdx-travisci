@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Set_Type_to_Customer</fullName>
+        <field>Type</field>
+        <literalValue>Customer</literalValue>
+        <name>Set Type to Customer</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Type_to_Pending</fullName>
+        <field>Type</field>
+        <literalValue>Pending</literalValue>
+        <name>Set Type to Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Type_to_Prospect</fullName>
+        <field>Type</field>
+        <literalValue>Prospect</literalValue>
+        <name>Set Type to Prospect</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>Account_Outbound_message</fullName>
+        <apiVersion>40.0</apiVersion>
+        <endpointUrl>http://localhost:8080/services/account</endpointUrl>
+        <fields>AccountNumber</fields>
+        <fields>AccountSource</fields>
+        <fields>BillingCity</fields>
+        <fields>BillingCountry</fields>
+        <fields>Id</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>michelle@devorg.com</integrationUser>
+        <name>Account Outbound message</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+</Workflow>

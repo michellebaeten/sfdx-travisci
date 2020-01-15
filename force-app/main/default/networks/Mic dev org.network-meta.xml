@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowInternalUserLogin>false</allowInternalUserLogin>
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <communityRoles/>
+    <disableReputationRecordConversations>true</disableReputationRecordConversations>
+    <emailSenderAddress>michellebaeten@hotmail.com</emailSenderAddress>
+    <emailSenderName>Mic dev org</emailSenderName>
+    <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
+    <enableDirectMessages>true</enableDirectMessages>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableGuestFileAccess>false</enableGuestFileAccess>
+    <enableGuestMemberVisibility>true</enableGuestMemberVisibility>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableMemberVisibility>true</enableMemberVisibility>
+    <enableNicknameDisplay>false</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <enableShowAllNetworkSettings>false</enableShowAllNetworkSettings>
+    <enableSiteAsContainer>true</enableSiteAsContainer>
+    <enableTalkingAboutStats>true</enableTalkingAboutStats>
+    <enableTopicAssignmentRules>true</enableTopicAssignmentRules>
+    <enableTopicSuggestions>true</enableTopicSuggestions>
+    <enableUpDownVote>false</enableUpDownVote>
+    <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
+    <networkMemberGroups>
+        <profile>Admin</profile>
+        <profile>Customer Portal Manager Custom</profile>
+        <profile>Customer Community User</profile>
+        <profile>Customer Portal Manager Standard</profile>
+        <profile>Customer Community Plus Login User</profile>
+        <profile>Customer Community Login User</profile>
+        <profile>Customer Community Plus User</profile>
+    </networkMemberGroups>
+    <networkPageOverrides>
+        <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
+        <forgotPasswordPageOverrideSetting>Designer</forgotPasswordPageOverrideSetting>
+        <homePageOverrideSetting>Designer</homePageOverrideSetting>
+        <loginPageOverrideSetting>Designer</loginPageOverrideSetting>
+        <selfRegProfilePageOverrideSetting>Designer</selfRegProfilePageOverrideSetting>
+    </networkPageOverrides>
+    <picassoSite>Mic_dev_org1</picassoSite>
+    <selfRegistration>false</selfRegistration>
+    <sendWelcomeEmail>true</sendWelcomeEmail>
+    <site>Mic_dev_org</site>
+    <status>UnderConstruction</status>
+    <tabs>
+        <defaultTab>home</defaultTab>
+        <standardTab>Chatter</standardTab>
+    </tabs>
+    <welcomeTemplate>unfiled$public/CommunityWelcomeEmailTemplate</welcomeTemplate>
+</Network>
