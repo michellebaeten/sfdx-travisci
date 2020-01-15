@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
-    <help><!-- So that you can be notified when users are removed from groups, the trigger will on delete of CollaborationGroupMember records uncheck this field then delete this record. You can use Workflow or Process Builder to monitor for this field changing. --></help>
-    <label><!-- Is Member? --></label>
-    <name>Is_Member__c</name>
-</CustomFieldTranslation>

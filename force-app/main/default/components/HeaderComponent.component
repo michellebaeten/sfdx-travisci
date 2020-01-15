@@ -1,9 +1,0 @@
-<apex:component >
-    <apex:attribute name="title" description="This is the page title" type="String" />
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>    
-    <apex:stylesheet value="{!URLFOR($Resource.supermumscontent, '/staticResources/style.css')}"/>
-    <apex:includeScript value="{!URLFOR($Resource.supermumscontent, '/staticResources/main.js')}"/> 
-    <title>{!IF(ISNULL(title), "Supermums", title)}</title>
-</apex:component>
